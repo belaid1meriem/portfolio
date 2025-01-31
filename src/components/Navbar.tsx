@@ -7,7 +7,7 @@ export default function Navbar() {
     setActiveLink(link);
   };
   return (
-    <nav className=" flex justify-between items-center  px-6 pt-4 pb-2 bg-neutral-50 ">
+    <nav className=" flex justify-between items-center  px-6 pt-4 pb-2 bg-neutral-50 sticky top-0  z-50 ">
         <h1 className="text-blue-400 font-semibold text-xl cursor-default">Meriem.</h1>
         <ul className="flex gap-6 justify-between items-center max-sm:hidden">
             <li

@@ -24,18 +24,18 @@
     animation: bar-animation .5s linear; 
   }
   .bar-view-animate {
-    width: 0%;
-    animation: bar-animation linear forwards; 
+    animation: bar-animation  linear ; 
     animation-timeline: view();
-    animation-range: entry-crossing;
+    animation-range: entry 200% ;
   }
+
 }
 
 @keyframes bar-animation{
-  0% {
+  from {
     width: 0%;
   }
-  100% {
+  to {
     width: 100%;
   }
 }

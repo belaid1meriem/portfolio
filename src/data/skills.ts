@@ -4,7 +4,7 @@ interface Skill {
     techStack: Technology[];
 }
 
-interface Technology {
+export interface Technology {
     name: string;
     icon: string;
 }

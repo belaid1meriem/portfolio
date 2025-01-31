@@ -1,4 +1,6 @@
+import { FaLinkedin } from 'react-icons/fa'
 import pic from '../assets/myPic.jpg'
+import { FaGithub } from 'react-icons/fa'
 function Home() {
   return (
     <section id="home" className="relative flex justify-center items-center">
@@ -21,7 +23,15 @@ function Home() {
                     </span> 
                 </div>
                 <p className="text-sm text-center max-w-prose px-6"> Hey there! I'm a curious computer science student who loves building, exploring, and learning. Let's create something amazing!</p>
-                <a href="#contact" className=" px-6 py-2 rounded-full border-2 border-blue-400 text-blue-400 transition duration-200 ease-in-out  hover:bg-blue-400 hover:text-neutral-50 "> Get in touch</a>
+                {/* <a href="#contact" className=" px-6 py-2 rounded-full border-2 border-blue-400 text-blue-400 transition duration-200 ease-in-out  hover:bg-blue-400 hover:text-neutral-50 "> Get in touch</a> */}
+                <div className="flex items-center gap-3 text-2xl text-blue-400">
+                            <a href="https://www.linkedin.com/in/meriem-belaid-8a2b31278/">
+                                <FaLinkedin className="cursor-pointer  hover:text-blue-500 transition-all duration-150" />
+                            </a>
+                            <a href="https://github.com/belaid1meriem" target="_blank" >
+                                <FaGithub className="cursor-pointer hover:text-blue-500 transition-all duration-150" />
+                            </a>
+                </div>
             </div>
         </div> 
     </section>
