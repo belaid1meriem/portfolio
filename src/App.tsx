@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-neutral-white text-neutral-900 bg-neutral-50 flex flex-col gap-16 font-poppins scroll-smooth ">
+      <div className="bg-neutral-white text-neutral-900 bg-neutral-50 flex flex-col gap-16 font-poppins !scroll-smooth ">
         <Navbar/>
         <Home/>
         <Skills/>

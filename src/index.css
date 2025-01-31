@@ -9,6 +9,7 @@
   line-height: 1.5;
   font-weight: 400;
   color: #121212;
+  scroll-behavior: smooth;
   background-color: #FFF;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
