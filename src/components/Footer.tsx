@@ -9,7 +9,7 @@ function Footer() {
             <p>&copy; 2025 - All rights reserved</p>
         </div>
         <div className="flex items-center gap-3 text-2xl">
-            <a href="https://www.linkedin.com/in/meriem-belaid-8a2b31278/">
+            <a href="https://www.linkedin.com/in/meriem-belaid-8a2b31278/" target="_blank">
                 <FaLinkedin className="cursor-pointer hover:text-blue-200 transition-all duration-150" />
             </a>
             <a href="https://github.com/belaid1meriem" target="_blank" >

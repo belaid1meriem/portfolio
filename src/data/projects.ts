@@ -1,5 +1,5 @@
 import { Technology } from "./skills";
-
+import img from '../assets/picture.png'
 interface Project {
     source: string;
     image: string;
@@ -13,7 +13,7 @@ interface Project {
 export const projects : Project[] = [
     {
         source:'Personal project',
-        image: '../assets/picture.png',
+        image: img ,
         name: 'Portfolio Website',
         description: 'A responsive and modern portfolio website built using React, Vite, and Tailwind CSS.',
         techStack: [
@@ -26,7 +26,7 @@ export const projects : Project[] = [
     },
     {
         source:'Built as a part of my internship at AETIndusries',
-        image: '../assests/picture.png',
+        image: img ,
         name: 'Location Data Simulation App',
         description: 'A web app for simulating and visualizing geospatial data using React, Leaflet, and Turf.js. It offers real-time map rendering and geodata analysis for testing and visualization purposes',
         techStack: [
@@ -35,22 +35,22 @@ export const projects : Project[] = [
             { name: 'Turf.js', icon: '/tailwindcss.svg' },
         ],
         githubLink: 'https://github.com/belaid1meriem/Location-Data-Simulation',
-        liveLink: 'location-data-simulation.netlify.app/',
+        liveLink: 'https://location-data-simulation.netlify.app/',
     },
     {
         source:'Personal Project',
-        image: '../assests/picture.png',
+        image: img,
         name: 'ExploreX website',
         description: 'A React-based website for ExploreX, an event dedicated to exploring diverse technology paths. It features a responsive design to showcase event details, schedules, and resources, providing attendees with an engaging and seamless experience.',
         techStack: [
             { name: 'React', icon: '/react.svg' },
         ],
         githubLink: 'https://github.com/belaid1meriem/ExploreX',
-        liveLink: 'explorex.netlify.app/',
+        liveLink: 'https://explorex.netlify.app/',
     },
     {
         source:'Personal Project',
-        image: '../assests/picture.png',
+        image: img,
         name: 'Electronic Patient Record Management',
         description: 'A web-based application for managing electronic patient records. It allows healthcare professionals to store, retrieve, and update patient information securely. The Frontend of the app is built using Angular.',
         techStack: [
@@ -60,7 +60,7 @@ export const projects : Project[] = [
     },
     {
         source:'Personal Project',
-        image: '../assests/picture.png',
+        image: img,
         name: 'Challenges Platform',
         description: 'A platform for creating and participating in coding challenges. It allows users to partcipate in challenges and solve them with thiers team. The Frontend of the app is built using Vue.js.',
         techStack: [

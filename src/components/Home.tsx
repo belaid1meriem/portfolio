@@ -15,7 +15,7 @@ function Home() {
         <div className="flex flex-col gap-8 justify-center items-center w-full relative ">
             <img src={pic} alt="Developer" className="w-60 h-60 object-cover rounded-full "/>
             <div className="flex flex-col items-center justify-start gap-4 cursor-default ">
-                <div className='max-sm:text-sm text-xl text-center font-semibold flex gap-1 '>
+                <div className='max-sm:text-sm text-3xl text-center font-semibold flex gap-1 '>
                     <h6 className="">Hi, I'm Belaid Meriem |</h6>
                     <span className='relative z-20'>
                         <h6 className='relative z-20'>Web Developer</h6>
@@ -23,7 +23,7 @@ function Home() {
                     </span> 
                 </div>
                 <p className="text-sm text-center max-w-prose px-6"> Hey there! I'm a curious computer science student who loves building, exploring, and learning. Let's create something amazing!</p>
-                {/* <a href="#contact" className=" px-6 py-2 rounded-full border-2 border-blue-400 text-blue-400 transition duration-200 ease-in-out  hover:bg-blue-400 hover:text-neutral-50 "> Get in touch</a> */}
+
                 <div className="flex items-center gap-3 text-2xl text-blue-400">
                             <a href="https://www.linkedin.com/in/meriem-belaid-8a2b31278/">
                                 <FaLinkedin className="cursor-pointer  hover:text-blue-500 transition-all duration-150" />

@@ -10,7 +10,7 @@ export default {
         poppins: 'Poppins, sans-serif',
       },
       animation:{
-        blob: 'blob 7s infinite'
+        blob: 'blob 12s infinite'
       },
       keyframes:{
         blob:{
@@ -18,7 +18,7 @@ export default {
             transform: "translate(0px,0px) scale(1)"
           },
           "33%":{
-            transform: "translate(20px,-20px) scale(1.1)"
+            transform: "translate(50px,-50px) scale(1.1)"
           },
           "0%":{
             transform: "translate(10px,-10px) scale(0.9)"
