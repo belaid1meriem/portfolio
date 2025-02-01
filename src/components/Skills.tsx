@@ -3,13 +3,13 @@ function Skills() {
   return (
     <section className="flex flex-col gap-8 items-start p-6 relative cursor-default" id="skills">
        
-        <div className="max-sm:text-md text-3xl font-semibold  relative z-20 ">
+        <div className="max-sm:text-md text-3xl font-semibold  relative z-20 block-animate">
             <h6 className='relative z-20'>My Skills</h6>
             <span className='w-fit max-sm:h-2 h-4 bg-blue-400 absolute left-0 right-0 -bottom-1  z-0 text-transparent bar-animate'>My Skills</span>
         </div>
        <div className="grid grid-cols-2 gap-16 max-sm:grid-cols-1 md:px-16 bg-neutral-50">
             {skills.map((skill, index) => (
-                <div className="border rounded-md border-neutral-900 p-4 flex flex-col gap-4 hover:shadow-lg bg-neutral-50" key={index}>
+                <div className="border rounded-md border-neutral-900 p-4 flex flex-col gap-4 hover:shadow-lg bg-neutral-50 block-animate" key={index}>
                     <h6 className="text-lg font-semibold text-center">{skill.skill}</h6>
                     <p className="text-md text-center">{skill.description}</p>
                     <div className="flex flex-wrap gap-2">

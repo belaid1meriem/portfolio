@@ -2,15 +2,14 @@ import { projects } from "../data/projects"
 
 function Projects() {
   return (
-    <section className="flex flex-col gap-8 items-start p-6 relative cursor-default" id="projects">
-       
-        <div className="max-sm:text-md text-3xl font-semibold  relative z-20 ">
-            <h6 className='relative z-20'>My Projects</h6>
+    <section className="flex flex-col gap-8 items-start p-6 relative cursor-default " id="projects">
+        <div className="max-sm:text-md text-3xl font-semibold  relative z-20 block-animate">
+            <h6 className='relative z-20 '>My Projects</h6>
             <span className='w-fit max-sm:h-2 h-4 bg-blue-400 absolute left-0 right-0 -bottom-1  z-0 text-transparent bar-animate'>My Projects</span>
         </div>
        <div className="grid grid-cols-1 gap-16 md:px-16 sm:px-8 bg-neutral-50">
             {projects.map((project, index)=> (
-              <div className="grid grid-cols-2 max-sm:grid-cols-1 max-sm:gap-4 " key={index}>
+              <div className="grid grid-cols-2 max-sm:grid-cols-1 max-sm:gap-4 block-animate " key={index}>
                 <div className="flex flex-col gap-4">
                   <small className="text-xs"> {project.source} </small>
                   <h6 className="text-lg font-semibold">{project.name}</h6>
