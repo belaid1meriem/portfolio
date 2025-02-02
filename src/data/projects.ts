@@ -1,5 +1,8 @@
 import { Technology } from "./skills";
-import img from '../assets/picture.png'
+import img from '../assets/picture.png';
+import dpi from '../assets/dpi.png'
+import dataSimul from '../assets/dataSimulation.png'
+import explorex from '../assets/explorex.png'
 interface Project {
     source: string;
     image: string;
@@ -22,11 +25,11 @@ export const projects : Project[] = [
             { name: 'Tailwind CSS', icon: '/tailwindcss.svg' },
         ],
         githubLink: 'https://github.com/belaid1meriem/portfolio',
-        liveLink: 'https://belaidmeriem.github.io/portfolio/',
+        liveLink: '/',
     },
     {
-        source:'Built as a part of my internship at AETIndusries',
-        image: img ,
+        source:'Built as a part of my internship at AETIndustries',
+        image: dataSimul ,
         name: 'Location Data Simulation App',
         description: 'A web app for simulating and visualizing geospatial data using React, Leaflet, and Turf.js. It offers real-time map rendering and geodata analysis for testing and visualization purposes',
         techStack: [
@@ -38,8 +41,8 @@ export const projects : Project[] = [
         liveLink: 'https://location-data-simulation.netlify.app/',
     },
     {
-        source:'Personal Project',
-        image: img,
+        source:'Event Organization',
+        image: explorex,
         name: 'ExploreX website',
         description: 'A React-based website for ExploreX, an event dedicated to exploring diverse technology paths. It features a responsive design to showcase event details, schedules, and resources, providing attendees with an engaging and seamless experience.',
         techStack: [
@@ -50,7 +53,7 @@ export const projects : Project[] = [
     },
     {
         source:'Personal Project',
-        image: img,
+        image: dpi,
         name: 'Electronic Patient Record Management',
         description: 'A web-based application for managing electronic patient records. It allows healthcare professionals to store, retrieve, and update patient information securely. The Frontend of the app is built using Angular.',
         techStack: [
@@ -58,15 +61,4 @@ export const projects : Project[] = [
         ],
         githubLink: 'https://github.com/rawane0310/Front_IGL',
     },
-    {
-        source:'Personal Project',
-        image: img,
-        name: 'Challenges Platform',
-        description: 'A platform for creating and participating in coding challenges. It allows users to partcipate in challenges and solve them with thiers team. The Frontend of the app is built using Vue.js.',
-        techStack: [
-            { name: 'Vuejs', icon: '/react.svg' },
-        ],
-        githubLink: 'https://github.com/belaid1meriem/Challenges-Platform',
-    }
-    
 ]

@@ -1,3 +1,4 @@
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa"
 import { projects } from "../data/projects"
 
 function Projects() {
@@ -12,17 +13,23 @@ function Projects() {
               <div className="grid grid-cols-2 max-sm:grid-cols-1 max-sm:gap-4 block-animate " key={index}>
                 <div className="flex flex-col gap-4">
                   <small className="text-xs"> {project.source} </small>
-                  <h6 className="text-lg font-semibold">{project.name}</h6>
+                  <div className="flex gap-3 items-center">
+                    <h3 className="text-xl font-semibold">{project.name}</h3>
+                    <a href={project.githubLink} target="_blank" >
+                      <FaGithub className="cursor-pointer  hover:text-blue-500 transition-all duration-150" />
+                    </a>
+                </div>
+                  
                   <div className="flex flex-wrap gap-2">
                         {project.techStack.map((tool, index) => (
                             <span className="bg-blue-400 text-neutral-50 px-2 py-1 rounded-full text-xs" key={index}>{tool.name}</span>
                         ))}
                   </div>
                   <p className="text-md ">{project.description}</p>
-                  {project?.liveLink && <a href={project?.liveLink} target="_blank" className="text-blue-400 hover:text-blue-500">View Project</a>}
+                  {project?.liveLink && <a href={project?.liveLink} target="_blank" className="text-blue-400 hover:text-blue-500 flex gap-2 items-center w-fit">View Live <FaExternalLinkAlt  /> </a>}
                 </div>
                 
-                <img src={project.image} alt="project" className="h-full w-2/3 max-sm:h-60 max-sm:w-full  object-contain ml-auto max-sm:mr-auto my-auto" />
+                <img src={project.image} alt="project" className="h-full w-2/3 max-sm:h-60 max-sm:w-full object-contain ml-auto max-sm:mr-auto my-auto " />
               </div>
             ))}
         </div>
