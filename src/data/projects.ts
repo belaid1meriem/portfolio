@@ -1,5 +1,4 @@
 import { Technology } from "./skills";
-import img from '../assets/picture.png';
 import dpi from '../assets/dpi.png'
 import dataSimul from '../assets/dataSimulation.png'
 import explorex from '../assets/explorex.png'
@@ -14,19 +13,6 @@ interface Project {
 }
 
 export const projects : Project[] = [
-    {
-        source:'Personal project',
-        image: img ,
-        name: 'Portfolio Website',
-        description: 'A responsive and modern portfolio website built using React, Vite, and Tailwind CSS.',
-        techStack: [
-            { name: 'React', icon: '/react.svg' },
-            { name: 'Vite', icon: '/vite.svg' },
-            { name: 'Tailwind CSS', icon: '/tailwindcss.svg' },
-        ],
-        githubLink: 'https://github.com/belaid1meriem/portfolio',
-        liveLink: '/',
-    },
     {
         source:'Built as a part of my internship at AETIndustries',
         image: dataSimul ,
