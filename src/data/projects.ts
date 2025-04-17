@@ -3,6 +3,7 @@ import img from '../assets/picture.png';
 import dpi from '../assets/dpi.png'
 import dataSimul from '../assets/dataSimulation.png'
 import explorex from '../assets/explorex.png'
+import groupPermut from '../assets/groupPermut.png'
 interface Project {
     source: string;
     image: string;
@@ -60,5 +61,18 @@ export const projects : Project[] = [
             { name: 'Angular', icon: '/react.svg' },
         ],
         githubLink: 'https://github.com/rawane0310/Front_IGL',
+    },
+    {
+        source:'Personal Project',
+        image: groupPermut,
+        name: 'Group Permutation System',
+        description: 'This project implements an algorithm for traversing a directed graph while respecting priority constraints. The algorithm finds valid group permutations based on priority order, ensuring a structured and efficient traversal. It uses igraph to represent the graph and applies a priority-based approach to determine movement between vertices.',
+        techStack: [
+            { name: 'Python', icon: '/react.svg' },
+            { name: 'FastAPI', icon: '/react.svg' },
+            { name: 'React', icon: '/react.svg' },
+        ],
+        githubLink: 'https://github.com/belaid1meriem/group-permutation.git',
+        liveLink: 'https://belaid1meriem.github.io/group-permutation/group_permutation.html'
     },
 ]
