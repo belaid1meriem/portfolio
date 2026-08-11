@@ -17,6 +17,12 @@ export default function Navbar() {
                 <a href="#home">Home</a>
             </li>
             <li
+                className={`cursor-pointer ${activeLink === 'experience' ? 'text-blue-400 ' : ''}`}
+                onClick={() => handleLinkClick('experience')}
+            >
+                <a href="#experience">Experience</a>
+            </li>
+            <li
                 className={`cursor-pointer ${activeLink === 'skills' ? 'text-blue-400 ' : ''}`}
                 onClick={() => handleLinkClick('skills')}
             >
@@ -39,4 +45,3 @@ export default function Navbar() {
     </nav>
   )
 }
-

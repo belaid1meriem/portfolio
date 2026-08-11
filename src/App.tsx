@@ -1,5 +1,6 @@
 import './App.css'
 import Contact from './components/Contact'
+import Experience from './components/Experience'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
@@ -13,6 +14,7 @@ function App() {
       <div className="bg-neutral-white text-neutral-900 bg-neutral-50 flex flex-col gap-16 font-poppins !scroll-smooth ">
         <Navbar/>
         <Home/>
+        <Experience/>
         <Skills/>
         <Projects/>
         <Contact/>
@@ -23,4 +25,3 @@ function App() {
 }
 
 export default App
-

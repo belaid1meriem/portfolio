@@ -1,4 +1,4 @@
-import { FaLinkedin } from 'react-icons/fa'
+import { FaFigma, FaLinkedin } from 'react-icons/fa'
 import pic from '../assets/myPic.jpg'
 import { FaGithub } from 'react-icons/fa'
 function Home() {
@@ -18,11 +18,11 @@ function Home() {
                 <div className='max-sm:text-sm text-3xl text-center font-semibold flex gap-1 home-animate '>
                     <h6 className="">Hi, I'm Belaid Meriem |</h6>
                     <span className='relative z-20'>
-                        <h6 className='relative z-20'>Web Developer</h6>
+                        <h6 className='relative z-20'>Software Engineer</h6>
                         <span className='w-full max-sm:h-2 h-4 bg-blue-400 absolute left-0 right-0 -bottom-1 z-0 bar-animate'></span>
                     </span> 
                 </div>
-                <p className="text-sm text-center max-w-prose px-6 home-animate"> Hey there! I'm a curious computer science student who loves building, exploring, and learning. Let's create something amazing!</p>
+                <p className="text-sm text-center max-w-prose px-6 home-animate"> Final-year Software Engineering student at ESI Algiers with experience in web development, mobile development, and software architecture through internships, freelance work, and academic projects. Interested in scalable systems and UI/UX design.</p>
 
                 <div className="flex items-center gap-3 text-2xl text-blue-400 home-animate">
                             <a href="https://www.linkedin.com/in/meriem-belaid-8a2b31278/">
@@ -30,6 +30,9 @@ function Home() {
                             </a>
                             <a href="https://github.com/belaid1meriem" target="_blank" >
                                 <FaGithub className="cursor-pointer hover:text-blue-500 transition-all duration-150" />
+                            </a>
+                            <a href="https://www.figma.com/design/L0y6I3DvN1f94eW82kWyxp/Belaid-Meriem-s-Designs?node-id=0-1&t=aMPrSSEfr5mzw0Vj-1" target="_blank" >
+                                <FaFigma className="cursor-pointer  hover:text-blue-500 transition-all duration-150" />
                             </a>
                 </div>
             </div>
