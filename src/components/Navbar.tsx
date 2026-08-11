@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { LuArrowUpRight, LuMenu, LuX } from 'react-icons/lu'
 
 const NAV_LINKS = [
@@ -17,6 +17,36 @@ export default function Navbar() {
     setActiveLink(link)
     setMenuOpen(false)
   }
+
+  useEffect(() => {
+    const sectionIds = NAV_LINKS.map((link) => link.id)
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => section !== null)
+
+    if (!sections.length) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => (b.intersectionRatio || 0) - (a.intersectionRatio || 0))[0]
+
+        if (visibleEntry) {
+          setActiveLink(visibleEntry.target.id)
+        }
+      },
+      {
+        root: null,
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: [0.1, 0.5, 0.9],
+      }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <nav className="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur">
