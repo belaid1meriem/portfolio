@@ -1,33 +1,49 @@
-import { skills } from "../data/skills"
+import { LuCode, LuDatabase, LuServer, LuSmartphone } from 'react-icons/lu'
+import type { IconType } from 'react-icons'
+import { skills } from '../data/skills'
+import SectionHeader from './ui/SectionHeader'
+import TechnologyBadge from './ui/TechnologyBadge'
+
+const SKILL_ICONS: Record<string, IconType> = {
+  Frontend: LuCode,
+  Backend: LuServer,
+  Mobile: LuSmartphone,
+  'Databases & Tools': LuDatabase,
+}
+
 function Skills() {
   return (
-    <section className="flex flex-col gap-8 items-start p-6 relative cursor-default" id="skills">
-       
-        <div className="max-sm:text-md text-3xl font-semibold  relative z-20 block-animate">
-            <h6 className='relative z-20'>My Skills</h6>
-            <span className='w-fit max-sm:h-2 h-4 bg-blue-400 absolute left-0 right-0 -bottom-1  z-0 text-transparent bar-animate'>My Skills</span>
-        </div>
-       <div className="grid grid-cols-2 gap-16 max-sm:grid-cols-1 md:px-16 bg-neutral-50">
-            {skills.map((skill, index) => (
-                <div className="border rounded-md border-neutral-900 p-4 flex flex-col gap-4 hover:shadow-lg bg-neutral-50 block-animate" key={index}>
-                    <h6 className="text-lg font-semibold text-center">{skill.skill}</h6>
-                    <p className="text-md text-center">{skill.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                        {skill.techStack.map((tool, index) => (
-                            <span className="bg-blue-400 text-neutral-50 px-2 py-1 rounded-full text-xs" key={index}>{tool.name}</span>
-                        ))}
-                    </div>
+    <section id="skills" className="scroll-mt-20 bg-white">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+        <SectionHeader icon={LuCode} title="My Skills" />
+
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {skills.map((skill, index) => {
+            const Icon = SKILL_ICONS[skill.skill] ?? LuCode
+            return (
+              <div
+                key={index}
+                className="flex flex-col rounded-2xl border border-neutral-200 bg-white p-5 transition hover:border-neutral-300 hover:shadow-sm"
+              >
+                <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 text-neutral-900">
+                  <Icon className="h-4 w-4" />
+                </span>
+                <h3 className="text-base font-semibold text-neutral-900">
+                  {skill.skill}
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-neutral-600">
+                  {skill.description}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {skill.techStack.map((tool, i) => (
+                    <TechnologyBadge key={i} name={tool.name} />
+                  ))}
                 </div>
-            ))}
+              </div>
+            )
+          })}
         </div>
-        <div className="absolute top-0 left-16 flex justify-center items-center ">
-            <div className="relative  max-w-lg">
-                <div className='bg-pink-300 rounded-full w-48 h-48 absolute top-7 -right-56 mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>
-                <div className='max-sm:hidden bg-yellow-300 rounded-full w-48 h-48 absolute top-16 -right-8 mix-blend-multiply filter blur-xl opacity-20  animate-blob delay-500'></div>
-                <div className='max-sm:hidden bg-purple-300 rounded-full w-48 h-48 absolute -bottom-32 -left-56 mix-blend-multiply filter blur-xl opacity-20   animate-blob delay-1000'></div>
-                <div className='bg-blue-300 rounded-full w-48 h-48 absolute -top-56 -right-56 mix-blend-multiply filter blur-xl opacity-20  animate-blob delay-700'></div>
-            </div>
-        </div>
+      </div>
     </section>
   )
 }

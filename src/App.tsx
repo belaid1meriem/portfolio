@@ -8,19 +8,18 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 
 function App() {
-
   return (
-    <>
-      <div className="bg-neutral-white text-neutral-900 bg-neutral-50 flex flex-col gap-16 font-poppins !scroll-smooth ">
-        <Navbar/>
-        <Home/>
-        <Experience/>
-        <Skills/>
-        <Projects/>
-        <Contact/>
-        <Footer/>
-      </div>
-    </>
+    <div className="bg-white font-sans text-neutral-900">
+      <Navbar />
+      <main>
+        <Home />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   )
 }
 

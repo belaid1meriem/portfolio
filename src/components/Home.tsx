@@ -1,42 +1,85 @@
-import { FaFigma, FaLinkedin } from 'react-icons/fa'
+import { FaFigma, FaGithub, FaLinkedin } from 'react-icons/fa'
 import pic from '../assets/myPic.jpg'
-import { FaGithub } from 'react-icons/fa'
+
+const SOCIALS = [
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/meriem-belaid-8a2b31278/',
+    icon: <FaLinkedin className="h-4 w-4" />,
+  },
+  {
+    label: 'GitHub',
+    href: 'https://github.com/belaid1meriem',
+    icon: <FaGithub className="h-4 w-4" />,
+  },
+  {
+    label: 'Figma',
+    href: 'https://www.figma.com/design/L0y6I3DvN1f94eW82kWyxp/Belaid-Meriem-s-Designs?node-id=0-1&t=aMPrSSEfr5mzw0Vj-1',
+    icon: <FaFigma className="h-4 w-4" />,
+  },
+]
+
 function Home() {
   return (
-    <section id="home" className="relative flex justify-center items-center ">
-        <div className="absolute top-0 w-full h-full flex justify-center items-center ">
-            <div className="relative max-w-lg">
-                <div className='max-sm:hidden bg-pink-300 rounded-full w-48 h-48 absolute top-7 -right-56 mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>
-                <div className='bg-yellow-300 rounded-full w-48 h-48 absolute top-16 -right-8 mix-blend-multiply filter blur-xl opacity-20  animate-blob delay-500'></div>
-                <div className='bg-purple-300 rounded-full w-48 h-48 absolute -bottom-32 -left-56 mix-blend-multiply filter blur-xl opacity-20   animate-blob delay-1000'></div>
-                <div className='max-sm:hidden bg-blue-300 rounded-full w-48 h-48 absolute -top-56 -right-56 mix-blend-multiply filter blur-xl opacity-20  animate-blob delay-700'></div>
-            </div>
-        </div>
-        <div className="flex flex-col gap-8 justify-center items-center w-full relative ">
-            <img src={pic} alt="Developer" className="w-60 h-60 object-cover rounded-full home-animate "/>
-            <div className="flex flex-col items-center justify-start gap-4 cursor-default ">
-                <div className='max-sm:text-sm text-3xl text-center font-semibold flex gap-1 home-animate '>
-                    <h6 className="">Hi, I'm Belaid Meriem |</h6>
-                    <span className='relative z-20'>
-                        <h6 className='relative z-20'>Software Engineer</h6>
-                        <span className='w-full max-sm:h-2 h-4 bg-blue-400 absolute left-0 right-0 -bottom-1 z-0 bar-animate'></span>
-                    </span> 
-                </div>
-                <p className="text-sm text-center max-w-prose px-6 home-animate"> Final-year Software Engineering student at ESI Algiers with experience in web development, mobile development, and software architecture through internships, freelance work, and academic projects. Interested in scalable systems and UI/UX design.</p>
+    <section
+      id="home"
+      className="scroll-mt-20 border-b border-neutral-100 bg-white"
+    >
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24 lg:gap-16">
+        {/* Left column */}
+        <div className="flex flex-col items-start">
+          <p className="text-base font-medium text-neutral-500 md:text-lg">
+            Hi, I'm
+          </p>
+          <h1 className="mt-2 text-5xl font-extrabold tracking-tight text-neutral-900 sm:text-6xl xl:text-7xl">
+            Belaid Meriem
+          </h1>
+          <p className="mt-4 text-xl font-medium text-neutral-800 md:text-2xl">
+            Software Engineer
+          </p>
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-neutral-600 md:text-lg">
+            Final-year Software Engineering student at ESI Algiers with
+            experience in web development, mobile development, and software
+            architecture through internships, freelance work, and academic
+            projects. Interested in scalable systems and UI/UX design.
+          </p>
 
-                <div className="flex items-center gap-3 text-2xl text-blue-400 home-animate">
-                            <a href="https://www.linkedin.com/in/meriem-belaid-8a2b31278/">
-                                <FaLinkedin className="cursor-pointer  hover:text-blue-500 transition-all duration-150" />
-                            </a>
-                            <a href="https://github.com/belaid1meriem" target="_blank" >
-                                <FaGithub className="cursor-pointer hover:text-blue-500 transition-all duration-150" />
-                            </a>
-                            <a href="https://www.figma.com/design/L0y6I3DvN1f94eW82kWyxp/Belaid-Meriem-s-Designs?node-id=0-1&t=aMPrSSEfr5mzw0Vj-1" target="_blank" >
-                                <FaFigma className="cursor-pointer  hover:text-blue-500 transition-all duration-150" />
-                            </a>
-                </div>
-            </div>
-        </div> 
+          <div className="mt-8 flex items-center gap-3">
+            {SOCIALS.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={social.label}
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition hover:border-neutral-900 hover:bg-neutral-900 hover:text-white"
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Right column */}
+        <div className="relative flex justify-center md:justify-end">
+          {/* Subtle monochrome dot decoration */}
+          <div
+            className="absolute -top-6 right-0 hidden h-48 w-36 opacity-70 md:block"
+            style={{
+              backgroundImage: 'radial-gradient(#d4d4d8 1.5px, transparent 1.5px)',
+              backgroundSize: '18px 18px',
+            }}
+            aria-hidden="true"
+          />
+          <div className="relative h-64 w-64 overflow-hidden rounded-full border border-neutral-200 shadow-sm sm:h-80 sm:w-80 lg:h-96 lg:w-96">
+            <img
+              src={pic}
+              alt="Belaid Meriem"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

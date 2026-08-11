@@ -8,7 +8,7 @@ interface Experience {
 export const experiences: Experience[] = [
     {
         role: 'Full-Stack Developer',
-        company: 'Educational Platform for Mathematics Learning',
+        company: 'Educational Platform for Mathematics Learning, Freelance Project',
         period: 'Jul 2025 – Present',
         points: [
             'Participated in UI/UX design of the student mobile app and admin dashboard.',
@@ -18,7 +18,7 @@ export const experiences: Experience[] = [
     },
     {
         role: 'Web Development Intern',
-        company: 'Sirius Net — MIOT (Monitoring Industrial Objects and Technologies)',
+        company: 'Sirius Net, M-IoT',
         period: 'Jun 2025 – Aug 2025',
         points: [
             'Built the frontend using React.js for an industrial monitoring application.',
@@ -28,7 +28,7 @@ export const experiences: Experience[] = [
     },
     {
         role: 'Web Development Intern (Remote)',
-        company: 'INNOVIA — Secure Vault Management Web Application',
+        company: 'Innovia, Secure Vault Management Web Application',
         period: 'Jun 2025 – Jul 2025',
         points: [
             'Designed and implemented REST APIs using Symfony.',
@@ -37,7 +37,7 @@ export const experiences: Experience[] = [
     },
     {
         role: 'Web Development Intern',
-        company: 'AET Industries — Real-Time Location Data Simulation',
+        company: 'AET Industries, Real-Time Location Data Simulation',
         period: 'Jul 2024 – Aug 2024',
         points: [
             'Built a React application simulating real-time location data.',

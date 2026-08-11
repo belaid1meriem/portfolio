@@ -1,72 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: Poppins, sans-serif;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #121212;
+  color: #171717;
   scroll-behavior: smooth;
-  background-color: #FFF;
+  background-color: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-@layer utilities {
-  .bar-animate{
-    animation: bar-animation .5s linear; 
-  }
-  .bar-view-animate {
-    animation: bar-animation  linear ; 
-    animation-timeline: view();
-    animation-range: entry 200% ;
-  }
-
-  .block-animate{
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-  }
-
-  .home-animate{
-    animation: home-animation .5s linear ;
-  }
-
+html {
+  scroll-behavior: smooth;
 }
 
-@keyframes home-animation {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+body {
+  margin: 0;
+  background-color: #ffffff;
 }
-
-@keyframes appear {
-  from {
-    opacity: 0.5;
-    scale: 0.5;
-  }
-  to {
-    opacity: 1;
-    scale:1
-  }
-}
-
-
-@keyframes bar-animation{
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-

@@ -1,15 +1,34 @@
+import { LuArrowUpRight, LuSend } from 'react-icons/lu'
+
+const EMAIL = 'mm_belaid@esi.dz'
 
 function Contact() {
   return (
-    <section className="p-6 relative flex items-center justify-center my-32 cursor-default" id="contact">
-      <div className="absolute top-0 right-1/2 flex justify-center items-center ">
-        <div className="relative  max-w-lg md:rotate-0 rotate-90 ">
-            <div className='bg-pink-300 rounded-full w-48 h-48 absolute top-7 -right-56 mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>
+    <section id="contact" className="scroll-mt-20 bg-white">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+        <div className="flex flex-col items-start justify-between gap-8 rounded-3xl bg-neutral-900 px-6 py-12 md:flex-row md:items-center md:px-12">
+          <div className="flex items-start gap-5">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-neutral-900">
+              <LuSend className="h-5 w-5" />
+            </span>
+            <div>
+              <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                Let's build something amazing together.
+              </h2>
+              <p className="mt-2 text-neutral-300">
+                I'm always open to new opportunities and collaborations.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href={`mailto:${EMAIL}`}
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-6 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-neutral-900"
+          >
+            Get in touch
+            <LuArrowUpRight className="h-4 w-4" />
+          </a>
         </div>
-      </div>
-      <div className="max-sm:text-md text-3xl font-semibold w-fit relative z-20 group block-animate">
-            <a href="mailto:mm_belaid@esi.dz" target="_blank" className='relative z-20'>Contact Me</a>
-            <span className='w-fit max-sm:h-2 h-4 bg-blue-400 absolute left-0 right-0 -bottom-1  z-0 text-transparent group-hover:bar-animate '>My Projects</span>
       </div>
     </section>
   )
