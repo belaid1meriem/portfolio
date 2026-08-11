@@ -39,7 +39,7 @@ export default function Navbar() {
       {
         root: null,
         rootMargin: '-50% 0px -50% 0px',
-        threshold: [0.1, 0.5, 0.9],
+        threshold: 0,
       }
     )
 

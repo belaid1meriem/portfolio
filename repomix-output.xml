@@ -57,6 +57,8 @@ src/assets/groupPermut.png
 src/assets/myPic.jpg
 src/assets/picture.png
 src/assets/react.svg
+src/assets/siriusNet.png
+src/assets/vaultManager.png
 src/components/Contact.tsx
 src/components/Experience.tsx
 src/components/Footer.tsx
@@ -64,6 +66,8 @@ src/components/Home.tsx
 src/components/Navbar.tsx
 src/components/Projects.tsx
 src/components/Skills.tsx
+src/components/ui/SectionHeader.tsx
+src/components/ui/TechnologyBadge.tsx
 src/data/experience.ts
 src/data/projects.ts
 src/data/skills.ts
@@ -79,33 +83,6 @@ vite.config.ts
 
 <files>
 This section contains the contents of the repository's files.
-
-<file path=".gitignore">
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-</file>
 
 <file path="eslint.config.js">
 import js from '@eslint/js'
@@ -161,88 +138,40 @@ export default {
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="35.93" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 228"><path fill="#00D8FF" d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621c6.238-30.281 2.16-54.676-11.769-62.708c-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848a155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233C50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165a167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266c13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923a168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586c13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488c29.348-9.723 48.443-25.443 48.443-41.52c0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345c-3.24-10.257-7.612-21.163-12.963-32.432c5.106-11 9.31-21.767 12.459-31.957c2.619.758 5.16 1.557 7.61 2.4c23.69 8.156 38.14 20.213 38.14 29.504c0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787c-1.524 8.219-4.59 13.698-8.382 15.893c-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246c12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675c-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994c7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863c-6.35-5.437-9.555-10.836-9.555-15.216c0-9.322 13.897-21.212 37.076-29.293c2.813-.98 5.757-1.905 8.812-2.773c3.204 10.42 7.406 21.315 12.477 32.332c-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789c8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988c-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08c-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152c7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793c2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433c4.902.192 9.899.29 14.978.29c5.218 0 10.376-.117 15.453-.343c-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52c-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026a347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815a329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627a310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695a358.489 358.489 0 0 1 11.036 20.54a329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026c-.344 1.668-.73 3.367-1.15 5.09c-10.622-2.452-22.155-4.275-34.23-5.408c-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86s-22.86-10.235-22.86-22.86s10.235-22.86 22.86-22.86Z"></path></svg>
 </file>
 
-<file path="src/components/Experience.tsx">
-import { experiences } from "../data/experience"
+<file path="src/components/ui/SectionHeader.tsx">
+import type { IconType } from 'react-icons'
 
-function Experience() {
+interface SectionHeaderProps {
+  icon: IconType
+  title: string
+}
+
+export default function SectionHeader({ icon: Icon, title }: SectionHeaderProps) {
   return (
-    <section className="flex flex-col gap-8 items-start p-6 relative cursor-default" id="experience">
-        <div className="max-sm:text-md text-3xl font-semibold relative z-20 block-animate">
-            <h6 className='relative z-20'>Experience</h6>
-            <span className='w-fit max-sm:h-2 h-4 bg-blue-400 absolute left-0 right-0 -bottom-1 z-0 text-transparent bar-animate'>Experience</span>
-        </div>
-        <div className="flex flex-col gap-12 w-full md:px-16">
-            {experiences.map((exp, index) => (
-                <div className="flex flex-col gap-2 bg-neutral-50 block-animate" key={index}>
-                    <div className="flex justify-between items-start flex-wrap gap-2">
-                        <h6 className="text-lg font-semibold">{exp.role}</h6>
-                        <span className="text-xs text-neutral-500 whitespace-nowrap">{exp.period}</span>
-                    </div>
-                    <p className="text-sm font-medium text-blue-400">{exp.company}</p>
-                    <ul className="text-sm list-disc list-inside flex flex-col gap-1">
-                        {exp.points.map((point, i) => (
-                            <li key={i}>{point}</li>
-                        ))}
-                    </ul>
-                </div>
-            ))}
-        </div>
-    </section>
+    <div className="flex items-center gap-3">
+      <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-neutral-200 bg-white text-neutral-900">
+        <Icon className="h-4 w-4" />
+      </span>
+      <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl">
+        {title}
+      </h2>
+    </div>
   )
 }
-
-export default Experience
 </file>
 
-<file path="src/data/experience.ts">
-interface Experience {
-    role: string;
-    company: string;
-    period: string;
-    points: string[];
+<file path="src/components/ui/TechnologyBadge.tsx">
+interface TechnologyBadgeProps {
+  name: string
 }
 
-export const experiences: Experience[] = [
-    {
-        role: 'Full-Stack Developer',
-        company: 'Educational Platform for Mathematics Learning',
-        period: 'Jul 2025 – Present',
-        points: [
-            'Participated in UI/UX design of the student mobile app and admin dashboard.',
-            'Developed REST APIs with Django REST Framework for managing courses and learning bundles (CRUD).',
-            'Implemented student search, points management, activity history, and notification features.',
-        ]
-    },
-    {
-        role: 'Web Development Intern',
-        company: 'Sirius Net — MIOT (Monitoring Industrial Objects and Technologies)',
-        period: 'Jun 2025 – Aug 2025',
-        points: [
-            'Built the frontend using React.js for an industrial monitoring application.',
-            'Integrated real-time communication using Server-Sent Events (SSE).',
-            'Collaborated on database modeling and Figma interface design.',
-        ]
-    },
-    {
-        role: 'Web Development Intern (Remote)',
-        company: 'INNOVIA — Secure Vault Management Web Application',
-        period: 'Jun 2025 – Jul 2025',
-        points: [
-            'Designed and implemented REST APIs using Symfony.',
-            'Developed the frontend using Vue.js with a MySQL database.',
-        ]
-    },
-    {
-        role: 'Web Development Intern',
-        company: 'AET Industries — Real-Time Location Data Simulation',
-        period: 'Jul 2024 – Aug 2024',
-        points: [
-            'Built a React application simulating real-time location data.',
-            'Integrated React Leaflet and Turf.js for geospatial visualization and processing.',
-            'Developed a smooth, performance-optimized interactive interface.',
-        ]
-    },
-]
+export default function TechnologyBadge({ name }: TechnologyBadgeProps) {
+  return (
+    <span className="inline-flex items-center rounded-md border border-neutral-200 bg-neutral-50 px-2.5 py-1 text-xs font-medium text-neutral-700">
+      {name}
+    </span>
+  )
+}
 </file>
 
 <file path="src/main.tsx">
@@ -338,6 +267,34 @@ export default defineConfig({
 })
 </file>
 
+<file path=".gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+.freebuff
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
+
 <file path="index.html">
 <!doctype html>
 <html lang="en">
@@ -394,18 +351,153 @@ export default defineConfig({
 This is my personal portfolio website where I showcase my projects, skills, and experiences. It's built to reflect my journey as a developer and is regularly updated with new work. Feel free to explore and reach out through the contact section!
 </file>
 
-<file path="src/components/Contact.tsx">
-function Contact() {
+<file path="src/components/Experience.tsx">
+import { LuBriefcase } from 'react-icons/lu'
+import { experiences } from '../data/experience'
+import SectionHeader from './ui/SectionHeader'
+
+function Experience() {
   return (
-    <section className="p-6 relative flex items-center justify-center my-32 cursor-default" id="contact">
-      <div className="absolute top-0 right-1/2 flex justify-center items-center ">
-        <div className="relative  max-w-lg md:rotate-0 rotate-90 ">
-            <div className='bg-pink-300 rounded-full w-48 h-48 absolute top-7 -right-56 mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>
+    <section id="experience" className="scroll-mt-20 bg-white">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+        <SectionHeader icon={LuBriefcase} title="Experience" />
+
+        <div className="mt-8 rounded-2xl border border-neutral-200 bg-white p-6 md:p-10">
+          {experiences.map((exp, index) => {
+            const isLast = index === experiences.length - 1
+            return (
+              <div
+                key={index}
+                className="grid grid-cols-[1.25rem_1fr] gap-x-4 md:grid-cols-[9rem_1.25rem_1fr] md:gap-x-6"
+              >
+                {/* Period (desktop) */}
+                <div className="hidden pt-1.5 text-sm leading-relaxed text-neutral-500 md:block">
+                  {exp.period}
+                </div>
+
+                {/* Timeline marker */}
+                <div className="relative flex justify-center">
+                  <span className="relative z-10 mt-2 h-2.5 w-2.5 rounded-full bg-neutral-900" />
+                  {!isLast && (
+                    <span className="absolute bottom-0 top-[1.125rem] w-px bg-neutral-200" />
+                  )}
+                </div>
+
+                {/* Content */}
+                <div className={isLast ? 'pb-0' : 'pb-10'}>
+                  <p className="text-sm font-medium text-neutral-500 md:hidden">
+                    {exp.period}
+                  </p>
+                  <h3 className="text-lg font-semibold text-neutral-900">
+                    {exp.role}
+                  </h3>
+                  <p className="mt-0.5 text-sm font-medium text-neutral-700">
+                    {exp.company}
+                  </p>
+                  <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-neutral-600">
+                    {exp.points.map((point, i) => (
+                      <li key={i} className="flex gap-2.5">
+                        <span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-neutral-400" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
-      <div className="max-sm:text-md text-3xl font-semibold w-fit relative z-20 group block-animate">
-            <a href="mailto:mm_belaid@esi.dz" target="_blank" className='relative z-20'>Contact Me</a>
-            <span className='w-fit max-sm:h-2 h-4 bg-blue-400 absolute left-0 right-0 -bottom-1  z-0 text-transparent group-hover:bar-animate '>My Projects</span>
+    </section>
+  )
+}
+
+export default Experience
+</file>
+
+<file path="src/data/experience.ts">
+interface Experience {
+    role: string;
+    company: string;
+    period: string;
+    points: string[];
+}
+
+export const experiences: Experience[] = [
+    {
+        role: 'Full-Stack Developer',
+        company: 'Educational Platform for Mathematics Learning, Freelance Project',
+        period: 'Jul 2025 – Present',
+        points: [
+            'Participated in UI/UX design of the student mobile app and admin dashboard.',
+            'Developed REST APIs with Django REST Framework for managing courses and learning bundles (CRUD).',
+            'Implemented student search, points management, activity history, and notification features.',
+        ]
+    },
+    {
+        role: 'Web Development Intern',
+        company: 'Sirius Net, M-IoT',
+        period: 'Jun 2025 – Aug 2025',
+        points: [
+            'Built the frontend using React.js for an industrial monitoring application.',
+            'Integrated real-time communication using Server-Sent Events (SSE).',
+            'Collaborated on database modeling and Figma interface design.',
+        ]
+    },
+    {
+        role: 'Web Development Intern (Remote)',
+        company: 'Innovia, Secure Vault Management Web Application',
+        period: 'Jun 2025 – Jul 2025',
+        points: [
+            'Designed and implemented REST APIs using Symfony.',
+            'Developed the frontend using Vue.js with a MySQL database.',
+        ]
+    },
+    {
+        role: 'Web Development Intern',
+        company: 'AET Industries, Real-Time Location Data Simulation',
+        period: 'Jul 2024 – Aug 2024',
+        points: [
+            'Built a React application simulating real-time location data.',
+            'Integrated React Leaflet and Turf.js for geospatial visualization and processing.',
+            'Developed a smooth, performance-optimized interactive interface.',
+        ]
+    },
+]
+</file>
+
+<file path="src/components/Contact.tsx">
+import { LuArrowUpRight, LuSend } from 'react-icons/lu'
+
+const EMAIL = 'mm_belaid@esi.dz'
+
+function Contact() {
+  return (
+    <section id="contact" className="scroll-mt-20 bg-white">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+        <div className="flex flex-col items-start justify-between gap-8 rounded-3xl bg-neutral-900 px-6 py-12 md:flex-row md:items-center md:px-12">
+          <div className="flex items-start gap-5">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-neutral-900">
+              <LuSend className="h-5 w-5" />
+            </span>
+            <div>
+              <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                Let's build something amazing together.
+              </h2>
+              <p className="mt-2 text-neutral-300">
+                I'm always open to new opportunities and collaborations.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href={`mailto:${EMAIL}`}
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-6 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-neutral-900"
+          >
+            Get in touch
+            <LuArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </section>
   )
@@ -423,29 +515,9 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        poppins: 'Poppins, sans-serif',
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
       },
-      animation:{
-        blob: 'blob 12s infinite'
-      },
-      keyframes:{
-        blob:{
-          "0%":{
-            transform: "translate(0px,0px) scale(1)"
-          },
-          "33%":{
-            transform: "translate(50px,-50px) scale(1.1)"
-          },
-          "0%":{
-            transform: "translate(10px,-10px) scale(0.9)"
-          },
-          "100%":{
-            transform: "translate(0px,0px) scale(1)"
-          }
-          
-        }
-      }
     },
   },
   plugins: [],
@@ -453,117 +525,50 @@ export default {
 </file>
 
 <file path="src/components/Footer.tsx">
-import { FaGithub } from "react-icons/fa"
-import { FaLinkedin } from "react-icons/fa6"
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { LuMail } from 'react-icons/lu'
 
 function Footer() {
   return (
-    <footer className='flex justify-between items-center bg-blue-400 text-neutral-50 p-8 '>
-        <div className="text-start">
-            <p>Made with 💖 by Meriem</p>
-            <p>&copy; 2026 - All rights reserved</p>
+    <footer className="border-t border-neutral-200 bg-white">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6">
+        <p className="text-base font-semibold text-neutral-900">Meriem.</p>
+        <p className="text-sm text-neutral-500">
+          © 2026 Belaid Meriem. All rights reserved.
+        </p>
+        <div className="flex items-center gap-2">
+          <a
+            href="https://www.linkedin.com/in/meriem-belaid-8a2b31278/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+            className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-900"
+          >
+            <FaLinkedin className="h-4 w-4" />
+          </a>
+          <a
+            href="https://github.com/belaid1meriem"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-900"
+          >
+            <FaGithub className="h-4 w-4" />
+          </a>
+          <a
+            href="mailto:mm_belaid@esi.dz"
+            aria-label="Email"
+            className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-900"
+          >
+            <LuMail className="h-4 w-4" />
+          </a>
         </div>
-        <div className="flex items-center gap-3 text-2xl">
-            <a href="https://www.linkedin.com/in/meriem-belaid-8a2b31278/" target="_blank">
-                <FaLinkedin className="cursor-pointer hover:text-blue-200 transition-all duration-150" />
-            </a>
-            <a href="https://github.com/belaid1meriem" target="_blank" >
-                <FaGithub className="cursor-pointer hover:text-blue-200 transition-all duration-150" />
-            </a>
-        </div>
+      </div>
     </footer>
   )
 }
 
 export default Footer
-</file>
-
-<file path="src/components/Navbar.tsx">
-import { useState } from "react";
-
-export default function Navbar() {
-  const [activeLink, setActiveLink] = useState('home');
-
-  const handleLinkClick = (link: string) => {
-    setActiveLink(link);
-  };
-  return (
-    <nav className=" flex justify-between items-center  px-6 pt-4 pb-2 bg-neutral-50 sticky top-0  z-50 ">
-        <h1 className="text-blue-400 font-semibold text-xl cursor-default">Meriem.</h1>
-        <ul className="flex gap-6 justify-between items-center max-sm:hidden">
-            <li
-                className={`cursor-pointer ${activeLink === 'home' ? 'text-blue-400 ' : ''}`}
-                onClick={() => handleLinkClick('home')}
-            >
-                <a href="#home">Home</a>
-            </li>
-            <li
-                className={`cursor-pointer ${activeLink === 'experience' ? 'text-blue-400 ' : ''}`}
-                onClick={() => handleLinkClick('experience')}
-            >
-                <a href="#experience">Experience</a>
-            </li>
-            <li
-                className={`cursor-pointer ${activeLink === 'skills' ? 'text-blue-400 ' : ''}`}
-                onClick={() => handleLinkClick('skills')}
-            >
-                <a href="#skills">Skills</a>
-            </li>
-            <li
-                className={`cursor-pointer ${activeLink === 'projects' ? 'text-blue-400 ' : ''}`}
-                onClick={() => handleLinkClick('projects')}
-            >
-                <a href="#projects">Projects</a>
-            </li>
-            <li
-                className={`cursor-pointer ${activeLink === 'contact' ? 'text-blue-400 ' : ''}`}
-                onClick={() => handleLinkClick('contact')}
-            >
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-        <a href="#contact" className="max-sm:hidden px-6 py-2 rounded-full border-2 border-blue-400 text-blue-400 transition duration-200 ease-in-out  hover:bg-blue-400 hover:text-neutral-50 "> Get in touch</a>
-    </nav>
-  )
-}
-</file>
-
-<file path="src/components/Skills.tsx">
-import { skills } from "../data/skills"
-function Skills() {
-  return (
-    <section className="flex flex-col gap-8 items-start p-6 relative cursor-default" id="skills">
-       
-        <div className="max-sm:text-md text-3xl font-semibold  relative z-20 block-animate">
-            <h6 className='relative z-20'>My Skills</h6>
-            <span className='w-fit max-sm:h-2 h-4 bg-blue-400 absolute left-0 right-0 -bottom-1  z-0 text-transparent bar-animate'>My Skills</span>
-        </div>
-       <div className="grid grid-cols-2 gap-16 max-sm:grid-cols-1 md:px-16 bg-neutral-50">
-            {skills.map((skill, index) => (
-                <div className="border rounded-md border-neutral-900 p-4 flex flex-col gap-4 hover:shadow-lg bg-neutral-50 block-animate" key={index}>
-                    <h6 className="text-lg font-semibold text-center">{skill.skill}</h6>
-                    <p className="text-md text-center">{skill.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                        {skill.techStack.map((tool, index) => (
-                            <span className="bg-blue-400 text-neutral-50 px-2 py-1 rounded-full text-xs" key={index}>{tool.name}</span>
-                        ))}
-                    </div>
-                </div>
-            ))}
-        </div>
-        <div className="absolute top-0 left-16 flex justify-center items-center ">
-            <div className="relative  max-w-lg">
-                <div className='bg-pink-300 rounded-full w-48 h-48 absolute top-7 -right-56 mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>
-                <div className='max-sm:hidden bg-yellow-300 rounded-full w-48 h-48 absolute top-16 -right-8 mix-blend-multiply filter blur-xl opacity-20  animate-blob delay-500'></div>
-                <div className='max-sm:hidden bg-purple-300 rounded-full w-48 h-48 absolute -bottom-32 -left-56 mix-blend-multiply filter blur-xl opacity-20   animate-blob delay-1000'></div>
-                <div className='bg-blue-300 rounded-full w-48 h-48 absolute -top-56 -right-56 mix-blend-multiply filter blur-xl opacity-20  animate-blob delay-700'></div>
-            </div>
-        </div>
-    </section>
-  )
-}
-
-export default Skills
 </file>
 
 <file path="src/data/skills.ts">
@@ -628,77 +633,225 @@ export const skills : Skill[] = [
 ]
 </file>
 
+<file path="src/components/Navbar.tsx">
+import { useEffect, useState } from 'react'
+import { LuArrowUpRight, LuMenu, LuX } from 'react-icons/lu'
+
+const NAV_LINKS = [
+  { id: 'home', label: 'Home' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'contact', label: 'Contact' },
+]
+
+export default function Navbar() {
+  const [activeLink, setActiveLink] = useState('home')
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const handleLinkClick = (link: string) => {
+    setActiveLink(link)
+    setMenuOpen(false)
+  }
+
+  useEffect(() => {
+    const sectionIds = NAV_LINKS.map((link) => link.id)
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => section !== null)
+
+    if (!sections.length) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => (b.intersectionRatio || 0) - (a.intersectionRatio || 0))[0]
+
+        if (visibleEntry) {
+          setActiveLink(visibleEntry.target.id)
+        }
+      },
+      {
+        root: null,
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: [0.1, 0.5, 0.9],
+      }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <nav className="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+        {/* Brand */}
+        <a
+          href="#home"
+          className="flex h-9 w-9 items-center justify-center rounded-full  text-sm font-bold text-neutral-900 transition"
+          onClick={() => handleLinkClick('home')}
+          aria-label="Meriem — Home"
+        >
+          M.
+        </a>
+
+        {/* Desktop navigation */}
+        <ul className="hidden items-center gap-8 md:flex">
+          {NAV_LINKS.map((link) => (
+            <li key={link.id}>
+              <a
+                href={`#${link.id}`}
+                onClick={() => handleLinkClick(link.id)}
+                className={`relative pb-1 text-sm font-medium transition ${
+                  activeLink === link.id
+                    ? 'text-neutral-900 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-neutral-900'
+                    : 'text-neutral-500 hover:text-neutral-900'
+                }`}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Desktop CTA */}
+        <a
+          href="#contact"
+          onClick={() => handleLinkClick('contact')}
+          className="hidden items-center gap-1.5 rounded-full bg-neutral-900 px-5 py-2 text-sm font-medium text-white transition hover:bg-neutral-700 md:inline-flex"
+        >
+          Get in touch
+          <LuArrowUpRight className="h-4 w-4" />
+        </a>
+
+        {/* Mobile menu toggle */}
+        <button
+          className="flex h-10 w-10 items-center justify-center rounded-md text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900 md:hidden"
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+        >
+          {menuOpen ? <LuX className="h-5 w-5" /> : <LuMenu className="h-5 w-5" />}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className="border-t border-neutral-200 bg-white px-4 pb-6 pt-2 md:hidden">
+          <ul className="flex flex-col">
+            {NAV_LINKS.map((link) => (
+              <li key={link.id}>
+                <a
+                  href={`#${link.id}`}
+                  onClick={() => handleLinkClick(link.id)}
+                  className={`block rounded-md px-3 py-2.5 text-sm font-medium transition ${
+                    activeLink === link.id
+                      ? 'bg-neutral-100 text-neutral-900'
+                      : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#contact"
+            onClick={() => handleLinkClick('contact')}
+            className="mt-3 inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-700"
+          >
+            Get in touch
+            <LuArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
+      )}
+    </nav>
+  )
+}
+</file>
+
+<file path="src/components/Skills.tsx">
+import { LuCode, LuDatabase, LuServer, LuSmartphone } from 'react-icons/lu'
+import type { IconType } from 'react-icons'
+import { skills } from '../data/skills'
+import SectionHeader from './ui/SectionHeader'
+import TechnologyBadge from './ui/TechnologyBadge'
+
+const SKILL_ICONS: Record<string, IconType> = {
+  Frontend: LuCode,
+  Backend: LuServer,
+  Mobile: LuSmartphone,
+  'Databases & Tools': LuDatabase,
+}
+
+function Skills() {
+  return (
+    <section id="skills" className="scroll-mt-20 bg-white">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+        <SectionHeader icon={LuCode} title="My Skills" />
+
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {skills.map((skill, index) => {
+            const Icon = SKILL_ICONS[skill.skill] ?? LuCode
+            return (
+              <div
+                key={index}
+                className="flex flex-col rounded-2xl border border-neutral-200 bg-white p-5 transition hover:border-neutral-300 hover:shadow-sm"
+              >
+                <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 text-neutral-900">
+                  <Icon className="h-4 w-4" />
+                </span>
+                <h3 className="text-base font-semibold text-neutral-900">
+                  {skill.skill}
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-neutral-600">
+                  {skill.description}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {skill.techStack.map((tool, i) => (
+                    <TechnologyBadge key={i} name={tool.name} />
+                  ))}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Skills
+</file>
+
 <file path="src/index.css">
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: Poppins, sans-serif;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #121212;
+  color: #171717;
   scroll-behavior: smooth;
-  background-color: #FFF;
+  background-color: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-@layer utilities {
-  .bar-animate{
-    animation: bar-animation .5s linear; 
-  }
-  .bar-view-animate {
-    animation: bar-animation  linear ; 
-    animation-timeline: view();
-    animation-range: entry 200% ;
-  }
-
-  .block-animate{
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-  }
-
-  .home-animate{
-    animation: home-animation .5s linear ;
-  }
-
+html {
+  scroll-behavior: smooth;
 }
 
-@keyframes home-animation {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes appear {
-  from {
-    opacity: 0.5;
-    scale: 0.5;
-  }
-  to {
-    opacity: 1;
-    scale:1
-  }
-}
-
-
-@keyframes bar-animation{
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
+body {
+  margin: 0;
+  background-color: #ffffff;
 }
 </file>
 
@@ -713,19 +866,18 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 
 function App() {
-
   return (
-    <>
-      <div className="bg-neutral-white text-neutral-900 bg-neutral-50 flex flex-col gap-16 font-poppins !scroll-smooth ">
-        <Navbar/>
-        <Home/>
-        <Experience/>
-        <Skills/>
-        <Projects/>
-        <Contact/>
-        <Footer/>
-      </div>
-    </>
+    <div className="bg-white font-sans text-neutral-900">
+      <Navbar />
+      <main>
+        <Home />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   )
 }
 
@@ -733,45 +885,88 @@ export default App
 </file>
 
 <file path="src/components/Home.tsx">
-import { FaFigma, FaLinkedin } from 'react-icons/fa'
+import { FaFigma, FaGithub, FaLinkedin } from 'react-icons/fa'
 import pic from '../assets/myPic.jpg'
-import { FaGithub } from 'react-icons/fa'
+
+const SOCIALS = [
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/meriem-belaid-8a2b31278/',
+    icon: <FaLinkedin className="h-4 w-4" />,
+  },
+  {
+    label: 'GitHub',
+    href: 'https://github.com/belaid1meriem',
+    icon: <FaGithub className="h-4 w-4" />,
+  },
+  {
+    label: 'Figma',
+    href: 'https://www.figma.com/design/L0y6I3DvN1f94eW82kWyxp/Belaid-Meriem-s-Designs?node-id=0-1&t=aMPrSSEfr5mzw0Vj-1',
+    icon: <FaFigma className="h-4 w-4" />,
+  },
+]
+
 function Home() {
   return (
-    <section id="home" className="relative flex justify-center items-center ">
-        <div className="absolute top-0 w-full h-full flex justify-center items-center ">
-            <div className="relative max-w-lg">
-                <div className='max-sm:hidden bg-pink-300 rounded-full w-48 h-48 absolute top-7 -right-56 mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>
-                <div className='bg-yellow-300 rounded-full w-48 h-48 absolute top-16 -right-8 mix-blend-multiply filter blur-xl opacity-20  animate-blob delay-500'></div>
-                <div className='bg-purple-300 rounded-full w-48 h-48 absolute -bottom-32 -left-56 mix-blend-multiply filter blur-xl opacity-20   animate-blob delay-1000'></div>
-                <div className='max-sm:hidden bg-blue-300 rounded-full w-48 h-48 absolute -top-56 -right-56 mix-blend-multiply filter blur-xl opacity-20  animate-blob delay-700'></div>
-            </div>
-        </div>
-        <div className="flex flex-col gap-8 justify-center items-center w-full relative ">
-            <img src={pic} alt="Developer" className="w-60 h-60 object-cover rounded-full home-animate "/>
-            <div className="flex flex-col items-center justify-start gap-4 cursor-default ">
-                <div className='max-sm:text-sm text-3xl text-center font-semibold flex gap-1 home-animate '>
-                    <h6 className="">Hi, I'm Belaid Meriem |</h6>
-                    <span className='relative z-20'>
-                        <h6 className='relative z-20'>Software Engineer</h6>
-                        <span className='w-full max-sm:h-2 h-4 bg-blue-400 absolute left-0 right-0 -bottom-1 z-0 bar-animate'></span>
-                    </span> 
-                </div>
-                <p className="text-sm text-center max-w-prose px-6 home-animate"> Final-year Software Engineering student at ESI Algiers with experience in web development, mobile development, and software architecture through internships, freelance work, and academic projects. Interested in scalable systems and UI/UX design.</p>
+    <section
+      id="home"
+      className="scroll-mt-20 border-b border-neutral-100 bg-white"
+    >
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24 lg:gap-16">
+        {/* Left column */}
+        <div className="flex flex-col items-start">
+          <p className="text-base font-medium text-neutral-500 md:text-lg">
+            Hi, I'm
+          </p>
+          <h1 className="mt-2 text-5xl font-extrabold tracking-tight text-neutral-900 sm:text-6xl xl:text-7xl">
+            Belaid Meriem
+          </h1>
+          <p className="mt-4 text-xl font-medium text-neutral-800 md:text-2xl">
+            Software Engineer
+          </p>
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-neutral-600 md:text-lg">
+            Final-year Software Engineering student at ESI Algiers with
+            experience in web development, mobile development, and software
+            architecture through internships, freelance work, and academic
+            projects. Interested in scalable systems and UI/UX design.
+          </p>
 
-                <div className="flex items-center gap-3 text-2xl text-blue-400 home-animate">
-                            <a href="https://www.linkedin.com/in/meriem-belaid-8a2b31278/">
-                                <FaLinkedin className="cursor-pointer  hover:text-blue-500 transition-all duration-150" />
-                            </a>
-                            <a href="https://github.com/belaid1meriem" target="_blank" >
-                                <FaGithub className="cursor-pointer hover:text-blue-500 transition-all duration-150" />
-                            </a>
-                            <a href="https://www.figma.com/design/L0y6I3DvN1f94eW82kWyxp/Belaid-Meriem-s-Designs?node-id=0-1&t=aMPrSSEfr5mzw0Vj-1" target="_blank" >
-                                <FaFigma className="cursor-pointer  hover:text-blue-500 transition-all duration-150" />
-                            </a>
-                </div>
-            </div>
-        </div> 
+          <div className="mt-8 flex items-center gap-3">
+            {SOCIALS.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={social.label}
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition hover:border-neutral-900 hover:bg-neutral-900 hover:text-white"
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Right column */}
+        <div className="relative flex justify-center md:justify-end">
+          {/* Subtle monochrome dot decoration */}
+          <div
+            className="absolute -top-6 right-0 hidden h-48 w-36 opacity-70 md:block"
+            style={{
+              backgroundImage: 'radial-gradient(#d4d4d8 1.5px, transparent 1.5px)',
+              backgroundSize: '18px 18px',
+            }}
+            aria-hidden="true"
+          />
+          <div className="relative h-64 w-64 overflow-hidden rounded-full border border-neutral-200 shadow-sm sm:h-80 sm:w-80 lg:h-96 lg:w-96">
+            <img
+              src={pic}
+              alt="Belaid Meriem"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
@@ -780,49 +975,75 @@ export default Home
 </file>
 
 <file path="src/components/Projects.tsx">
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa"
-import { projects } from "../data/projects"
+import { FaGithub } from 'react-icons/fa'
+import { LuArrowUpRight, LuFolder } from 'react-icons/lu'
+import { projects } from '../data/projects'
+import SectionHeader from './ui/SectionHeader'
+import TechnologyBadge from './ui/TechnologyBadge'
 
 function Projects() {
   return (
-    <section className="flex flex-col gap-8 items-start p-6 relative cursor-default " id="projects">
-      <div className="absolute top-48 right-80 flex justify-center items-center ">
-            <div className="relative  max-w-lg">
-                <div className='bg-pink-300 rounded-full w-48 h-48 absolute top-7 -right-56 mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>
-                <div className='max-sm:hidden bg-yellow-300 rounded-full w-48 h-48 absolute top-16 -right-8 mix-blend-multiply filter blur-xl opacity-20  animate-blob delay-500'></div>
-                <div className='max-sm:hidden bg-purple-300 rounded-full w-48 h-48 absolute -bottom-24 -left-32 mix-blend-multiply filter blur-xl opacity-20   animate-blob delay-1000'></div>
-                <div className='bg-blue-300 rounded-full w-48 h-48 absolute -top-56 -right-56 mix-blend-multiply filter blur-xl opacity-20  animate-blob delay-700'></div>
-            </div>
-      </div>
-        <div className="max-sm:text-md text-3xl font-semibold  relative z-20 block-animate">
-            <h6 className='relative z-20 '>My Projects</h6>
-            <span className='w-fit max-sm:h-2 h-4 bg-blue-400 absolute left-0 right-0 -bottom-1  z-0 text-transparent bar-animate'>My Projects</span>
-        </div>
-       <div className="grid grid-cols-1 gap-16 md:px-16 sm:px-8 bg-neutral-50">
-            {projects.map((project, index)=> (
-              <div className="grid grid-cols-2 max-sm:grid-cols-1 max-sm:gap-4 block-animate " key={index}>
-                <div className="flex flex-col gap-4">
-                  <small className="text-xs"> {project.source} </small>
-                  <div className="flex gap-3 items-center">
-                    <h3 className="text-xl font-semibold">{project.name}</h3>
-                    <a href={project.githubLink} target="_blank" >
-                      <FaGithub className="cursor-pointer  hover:text-blue-500 transition-all duration-150" />
+    <section id="projects" className="scroll-mt-20 bg-white">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+        <SectionHeader icon={LuFolder} title="My Projects" />
+
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          {projects.map((project, index) => (
+            <article
+              key={index}
+              className="flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:border-neutral-300 hover:shadow-md"
+            >
+              <img
+                src={project.image}
+                alt={project.name}
+                className="aspect-[16/10] w-full border-b border-neutral-200 object-cover object-top"
+              />
+
+              <div className="flex flex-1 flex-col gap-3 p-6">
+                <p className="text-xs font-medium uppercase tracking-wider text-neutral-500">
+                  {project.source}
+                </p>
+                <h3 className="text-lg font-semibold text-neutral-900">
+                  {project.name}
+                </h3>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.techStack.map((tool, i) => (
+                    <TechnologyBadge key={i} name={tool.name} />
+                  ))}
+                </div>
+
+                <p className="text-sm leading-relaxed text-neutral-600">
+                  {project.description}
+                </p>
+
+                <div className="mt-auto flex items-center gap-5 pt-4">
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-neutral-700 transition hover:text-neutral-900"
+                  >
+                    <FaGithub className="h-4 w-4" />
+                    Source
+                  </a>
+                  {project.liveLink && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-neutral-700 transition hover:text-neutral-900"
+                    >
+                      View live
+                      <LuArrowUpRight className="h-4 w-4" />
                     </a>
+                  )}
                 </div>
-                  
-                  <div className="flex flex-wrap gap-2">
-                        {project.techStack.map((tool, index) => (
-                            <span className="bg-blue-400 text-neutral-50 px-2 py-1 rounded-full text-xs" key={index}>{tool.name}</span>
-                        ))}
-                  </div>
-                  <p className="text-md ">{project.description}</p>
-                  {project?.liveLink && <a href={project?.liveLink} target="_blank" className="text-blue-400 hover:text-blue-500 flex gap-2 items-center w-fit">View Live <FaExternalLinkAlt  /> </a>}
-                </div>
-                
-                <img src={project.image} alt="project" className="h-full w-2/3 max-sm:h-60 max-sm:w-full object-contain ml-auto max-sm:mr-auto my-auto " />
               </div>
-            ))}
+            </article>
+          ))}
         </div>
+      </div>
     </section>
   )
 }
@@ -836,6 +1057,9 @@ import dpi from '../assets/dpi.png'
 import dataSimul from '../assets/dataSimulation.png'
 import groupPermut from '../assets/groupPermut.png'
 import airin from '../assets/airin.png'
+import vaultManager from '../assets/vaultManager.png'
+import siriusNet from '../assets/siriusNet.png'
+
 interface Project {
     source: string;
     image: string;
@@ -843,12 +1067,12 @@ interface Project {
     description: string;
     techStack: Technology[];
     githubLink: string;
-    liveLink ?: string;
+    liveLink?: string;
 }
 
-export const projects : Project[] = [
+export const projects: Project[] = [
     {
-        source:'Academic Project',
+        source: 'Academic Project',
         image: airin,
         name: 'AirIn - Airline Online Check-In App',
         description: 'An Android check-in application built with Kotlin and Jetpack Compose following the MVVM pattern. Contributed to UI/UX design of the passenger check-in workflow in Figma and implemented the user profile and seat selection screens, integrated with backend REST APIs.',
@@ -860,8 +1084,9 @@ export const projects : Project[] = [
         githubLink: 'https://github.com/belaid1meriem/AirIn-mobile',
         liveLink: 'https://www.figma.com/design/uxmph9ZxKBDjusvMC9LsvJ/Projet-TDM?node-id=3312-2&t=7MfrKZNtH3RCD8zq-1',
     },
+
     {
-        source:'Personal Project',
+        source: 'Personal Project',
         image: groupPermut,
         name: 'Group Permutation System',
         description: 'A graph-theory-based system that automates student group permutations while respecting priority constraints. The algorithm finds valid group permutations based on priority order using a priority-based traversal approach, with cycle detection to ensure fairness and consistency.',
@@ -873,8 +1098,9 @@ export const projects : Project[] = [
         githubLink: 'https://github.com/belaid1meriem/group-permutation.git',
         liveLink: 'https://belaid1meriem.github.io/group-permutation/group_permutation.html'
     },
+
     {
-        source:'Built as part of my internship at AET Industries',
+        source: 'Built as part of my internship at AET Industries',
         image: dataSimul,
         name: 'Location Data Simulation App',
         description: 'A web app for simulating and visualizing geospatial data using React, Leaflet, and Turf.js. It offers real-time map rendering and geodata analysis for testing and visualization purposes.',
@@ -886,8 +1112,34 @@ export const projects : Project[] = [
         githubLink: 'https://github.com/belaid1meriem/Location-Data-Simulation',
         liveLink: 'https://location-data-simulation.netlify.app/',
     },
+
     {
-        source:'Academic Project - Shifa',
+        source: 'Built as part of my internship at Sirius Net',
+        image: siriusNet, // Add project image
+        name: 'M-IoT - Industrial Monitoring Application',
+        description: 'An industrial IoT monitoring platform for managing clients, sites, machines, sensors, and connected assets. The application provides real-time monitoring through SSE, machine and sensor dashboards, geospatial visualization, and asset tracking with live locations, trajectories, and history.',
+        techStack: [
+            { name: 'React.js', icon: '/react.svg' },
+            { name: 'SSE', icon: '/react.svg' },
+        ],
+        githubLink: 'https://github.com/belaid1meriem/M-IoT_Frontend', // Add GitHub link if available
+    },
+
+    {
+        source: 'Built as part of my internship at Innovia',
+        image: vaultManager, 
+        name: 'Secure Vault Management Web Application',
+        description: 'A web application for managing secure vaults and their access codes. It supports user authentication, vault creation and management, secure code generation and regeneration, code-based vault lookup, and access-code history tracking through a Vue.js frontend and Symfony REST API.',
+        techStack: [
+            { name: 'Symfony', icon: '/react.svg' },
+            { name: 'Vue.js', icon: '/react.svg' },
+            { name: 'MySQL', icon: '/react.svg' },
+        ],
+        githubLink: 'https://github.com/belaid1meriem/gestion-de-coffres.git', // Add GitHub link if available
+    },
+
+    {
+        source: 'Academic Project - Shifa',
         image: dpi,
         name: 'Shifa - Patient Record Management System',
         description: 'Designed intuitive user interfaces and contributed to the overall user experience in Figma for a patient record management system, then implemented the frontend with Angular and integrated backend APIs to deliver core application features.',
